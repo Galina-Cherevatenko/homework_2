@@ -37,20 +37,21 @@ public class Main {
         //поиск одинаковых слов
         for (int i = 0; i < sortedList.size(); i++) {
             for (int j = i + 1; j < sortedList.size(); j++) {
-                if (sortedList.get(i).equals(sortedList.get(j)))
-                    anagram.add(sortedList.get(i));
+                if (sortedList.get(i).equals(sortedList.get(j))){
+                    anagram.add(list.get(i));
+                    anagram.add(list.get(j));}
             }
         }
 
-        sortedList.removeAll(anagram); // удаление повторяющихся слов из отсортированного массива
+        list.removeAll(anagram); // удаление анаграмм из исходного массива
 
         System.out.println("Анаграммы:");
         for(int i = 0; i< anagram.size(); i++) {
             System.out.println(anagram.get(i));
         }
         System.out.println("Не анаграммы:");
-        for(int i = 0; i< sortedList.size(); i++) {
-            System.out.println(sortedList.get(i));
+        for(int i = 0; i< list.size(); i++) {
+            System.out.println(list.get(i));
         }
     }
 }

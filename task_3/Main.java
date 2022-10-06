@@ -15,10 +15,22 @@ public class Main {
 
         int[][] arr = new int[n][m];
         int[] temp = new int[f];
-        System.out.println("Введите элементы массива:");
-        for (int i = 0; i < f; i++) {
-                temp[i] = in.nextInt();
+
+        //ввод двумерного массива
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print("Введите элемент arr[" + i + "][" + j + "]:");
+                arr[i][j] = in.nextInt();
             }
+        }
+        //перевод из двумерного массива в одномерный
+        int p=0;
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < m; j++){
+                temp [p]=arr [i][j];
+                p++;
+            }}
+
         in.close();
         //сортировка элементов массива по возрастанию
         for (int i = 0; i < f; i++) {

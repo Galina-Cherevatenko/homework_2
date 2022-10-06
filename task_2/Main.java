@@ -5,12 +5,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Что бы поделать?");
-        String str2 = in.nextLine();
+        if (in.nextLine().equals("Ничего не делай"))
+            System.out.println("Пойду бездельничать");
+        else {
         System.out.println("Что бы еще поделать?");
         while (!in.nextLine().equals("Ничего не делай"))
         System.out.println("Что бы еще поделать?");
-
-
-        System.out.println("Пойду бездельничать");
+        System.out.println("Пойду бездельничать");}
         in.close();
     }}
